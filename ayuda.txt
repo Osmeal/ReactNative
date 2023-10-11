@@ -1,0 +1,17 @@
+cd projectesOscar
+cd prova
+npx react-native run-android
+
+
+npm install react-native-paper
+npm install react-native-safe-area-context
+npm install react-native-vector-icons
+y en andrid > app > build.gradle pegar 
+apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
+
+
+Tutorial y mas 
+https://callstack.github.io/react-native-paper/docs/guides/getting-started
+
+iconos que puedo usar
+https://pictogrammers.com/library/mdi/
