@@ -6,6 +6,7 @@
  */
 
 import React from 'react';
+import { Provider as Papel } from 'react-native-paper';
 
 import {
   ScrollView,
@@ -35,7 +36,6 @@ const estil = StyleSheet.create({
     fontSize: 24,
     fontWeight: '600',
   },
-
 });
 
 export default App;
