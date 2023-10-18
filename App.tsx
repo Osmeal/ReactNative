@@ -18,8 +18,12 @@ import {
 
 import { Button } from 'react-native-paper'
 
-const Saluda = (texto, indexo, nom) => {
-  return (<Text style={estil.sectionTitle}>{texto}{"\n"}Hola {nom} {indexo}</Text>);//un metodo solo puede devolver un componente
+const Nom = (textAMostrar) => {
+  return (<Text style={estil.sectionTitle}>{textAMostrar}</Text>);
+};
+
+const dades = props => {
+  return<TextInput style={props.estil} placeholder={props.tipo}> </TextInput>;
 };
 
 /* Las dos opciones valen
