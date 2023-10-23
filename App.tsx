@@ -3,66 +3,69 @@
  * https://github.com/facebook/react-native
  *
  * @format
+ * @flow strict-local
  */
 
 import React from 'react';
-import { Provider as Papel } from 'react-native-paper';
-
 import {
-  ScrollView,
-  StatusBar,
   StyleSheet,
-  Text,
   View,
+  Text,
 } from 'react-native';
 
-import { Button } from 'react-native-paper'
-
-const Saluda = (texto, indexo, nom) => {
-  return (<Text style={estil.sectionTitle}>{texto}{"\n"}Hola {nom} {indexo}</Text>);//un metodo solo puede devolver un componente
-};
-
-/* Las dos opciones valen
-const Saluda = (texto:string, nombre:string) => {
-  return <View>
-<Text style={estil.sectionTitle}>{texto}</Text>
-<Text style={estil.sectionTitle}>Hola {nombre}</Text>
-  </View>
-};
-*/
-
 const App = () => {
-  //const isDarkMode = useColorScheme() === 'dark';
-  let esticLoguejat = true;
-  const alumnesDam = ["Borja", "Marcel", "Sergi", "Laia"];
-
-
-  //no hay que comparar con true, con nombre de variable se compara con true o usa !variable
-  return (
-    <Papel>
-      <StatusBar />
-      {
-        alumnesDam.map((unAlumne, index) => {
-          return(
-          Saluda("HBenvingut ", index, unAlumne)
-        )})
-
-      }
-    </Papel>
-  );
+    return (
+      
+      <View style={styles.contenidor}>
+          <View style={styles.seccio1}>
+              <Text>Secció 1</Text>
+          </View>
+          <View style={styles.seccio2}>
+            <Text>Secció 2</Text>
+          </View>
+          <View style={styles.seccio3}>
+            <Text>Secció 3</Text>
+          </View>
+      </View>
+    );
 };
 
-//esticLoguejat && Saluda("Benvingut", "Oscar") es un if sense else resumit
-/*  esticLoguejat
-  ?Saluda("Benvingut", "Oscar")
-  :Saluda("Primer t'has de loguejar", "Anònim")
-  */
-
-const estil = StyleSheet.create({
-
-  sectionTitle: {
-    fontSize: 24,
+const styles = StyleSheet.create({
+  contenidor: {//contenedor entero
+    flex: 1,//lo que ocupa
+    flexDirection: 'column',//column o row //columna o seguido //row-reverse ...
+    borderColor:'purple',
+    borderWidth:5,
+  },
+  seccio1: {
+    flex:1,
+    borderColor:'red',
+    borderWidth:3,
+    fontSize: 12,
     fontWeight: '600',
+    margin: 4,
+    padding: 12,
+    textAlign: 'right',
+  },
+  seccio2: {
+    flex:4,
+    borderColor:'green',
+    borderWidth:3,
+    fontSize: 12,
+    fontWeight: '600',
+    margin: 4,
+    padding: 12,
+    textAlign: 'center',
+  },  
+  seccio3: {
+    flex:1,
+    borderColor:'blue',
+    borderWidth:3,
+    fontSize: 12,
+    fontWeight: '600',
+    margin: 4,
+    padding: 12,
+    textAlign: 'left',
   },
 });
 
