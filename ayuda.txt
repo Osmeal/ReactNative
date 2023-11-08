@@ -15,3 +15,11 @@ https://callstack.github.io/react-native-paper/docs/guides/getting-started
 
 iconos que puedo usar
 https://pictogrammers.com/library/mdi/
+
+const comprovaEntrada = (unVal) => {
+const expressioRegular = /^\d+\.\d+$|^\d+$/; 
+//d=numero //para letra [a-Z] somo min la z min solo mayu la a mayu
+//+ es infinitos numeros //* infinitos o ninguno
+//{2} en lugar del + o * y son el numero que pongas //
+return expressioRegular.test(unVal);
+}
